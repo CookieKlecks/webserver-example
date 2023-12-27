@@ -1,0 +1,33 @@
+@use 'sass:color';
+
+/* make the customizations */
+$junGray: rgb(59, 59, 59);
+$junLightGray: rgb(100, 100, 100);
+$junUltraLightGray: rgb(120, 120, 120);
+$junDisabled: rgb(100, 100, 100);
+$junSeparatorColor: rgba(150, 150, 150, 0.2);
+$junHighlightBackgroundColor: rgba(190, 190, 190, 0.3);
+$junRed: #7e1718;
+$junLightRed: saturate(lighten($junRed, 17), 4);
+$junYellow: #F3CD23;
+$junGreen: #0B9218;
+
+$theme-colors: (
+        "primary": $junRed,
+        "secondary": $junLightGray,
+        "danger": #be1718,
+        "light": rgb(255, 255, 255),
+        "success": $junGreen
+);
+
+.btn-light {
+  border-color: $junSeparatorColor!important;
+}
+
+/* The maximum width of one column of content. No content column should be wider than this. */
+$maxColumnWidth: 1200px;
+$defaultGap: 1.5em;
+$defaultBorderRadius: 5px;
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";

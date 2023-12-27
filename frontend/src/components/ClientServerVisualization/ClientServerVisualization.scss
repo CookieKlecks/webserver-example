@@ -1,0 +1,146 @@
+.ClientServerVisualization {
+  display: grid;
+  grid-template-columns: min-content 35% auto;
+  grid-template-rows: 10cap auto; // the 10 cap is unfortunately hardcoded to fit the computer icon (min-content does not work)
+  grid-template-areas:
+    "computer package-path server"
+    "task task server";
+}
+
+.ClientServerVisualization > .Computer {
+  grid-area: computer;
+}
+
+.ClientServerVisualization > .Packages {
+  grid-area: package-path;
+}
+
+.ClientServerVisualization > .Server {
+  grid-area: server;
+
+  display: grid;
+  grid-template-rows: max-content auto;
+  grid-template-areas:
+    "server-icon"
+    "server-content";
+  justify-items: center;
+  align-items: center;
+
+  // draw the border
+  border: black 2px solid;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// Server Layout ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+.Server-icon {
+  grid-area: server-icon;
+}
+
+.Server-content {
+  grid-area: server-content;
+  width: 100%;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// Icon styles /////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+.icon {
+  font-size: 100px;
+}
+
+.small-icon {
+  font-size: 30px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: left;
+}
+
+.icon-description {
+  font-size: large;
+  font-weight: bold;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// Package Handling ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+.packages-path {
+  text-align: left;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.packages {
+  height: 3cap;
+}
+
+.single-package-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  position: relative;
+
+  // we set height to 0 to allow the overlapping of multiple packages on the same path.
+  // Note that position absolute or fixed did not work as then the overflow=hidden of the package path is ignored.
+  height: 0;
+}
+
+.single-package-container.forwards {
+  animation: move-right 1s linear forwards;
+}
+
+.single-package-container.backwards {
+  justify-content: flex-end;
+  animation: move-left 1s linear forwards;
+}
+
+.single-package {
+  text-align: left;
+  // here we must set a sufficiently large min-height, to ensure that the whole package is drawn.
+  // Note that the outer container has height 0 to allow collisions.
+  min-height: 100px;
+
+  white-space: nowrap;
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes move-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+
+.Task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  grid-area: task;
+  text-align: left;
+  margin-right: 12px;
+}

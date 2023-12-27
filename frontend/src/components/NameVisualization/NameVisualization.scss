@@ -1,0 +1,29 @@
+@import "../../jun-styling";
+
+.NameVisualization {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+
+.ViewSingleName {
+  overflow: hidden;
+  height: 3em;
+
+  border: solid black 1px;
+  border-radius: 5px;
+  box-shadow: $junSeparatorColor 5px 5px;
+
+  padding: 10px 5px;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

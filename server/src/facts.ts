@@ -1,0 +1,11 @@
+export const FACTS = [
+    "In einem geheimen Experiment wurde nachgewiesen, dass Kaugummi kauen tatsächlich die Gehirnaktivität um 15% erhöht, allerdings nur, wenn man dabei das Alphabet rückwärts aufsagt.",
+    "Es gibt eine kleine Insel in der Südsee, auf der die Einheimischen sich ausschließlich durch Sockenpuppen unterhalten, um Streit zu vermeiden. Diese Tradition wird seit Jahrhunderten praktiziert.",
+    "Forscher haben entdeckt, dass Hunde, die regelmäßig Musik hören, besonders Jazz und Klassik, tendenziell einen ausgeprägteren Sinn für Humor entwickeln und öfter zu Gähnen neigen.",
+    "Eine ungewöhnliche Stadt in den Bergen Japans hat eine Verordnung, die es Bürgern verbietet, ihre Hosen an einem Donnerstag falsch herum zu tragen. Diese Regel wurde im 19. Jahrhundert eingeführt, um den 'Tag des wilden Modestils' zu ehren.",
+    "Eine kuriose Tatsache besagt, dass wenn man eine Wassermelone in die Schwerelosigkeit des Weltraums bringt und sie dort aufschneidet, die Schalenstücke aufgrund der fehlenden Schwerkraft in geometrisch perfekte Würfel zerfallen.",
+    "In einer geheimen Unterwasserforschungsstation wurde eine Art Tintenfisch entdeckt, der eine Fähigkeit zur Beatboxen hat. Diese spezielle Art erzeugt Schallmuster, die erstaunlich menschenähnliche Klänge imitieren können.",
+    "Es gibt ein spezielles, unterirdisches Museum in Frankreich, das ausschließlich den evolutionären Werdegang der Perücke darstellt. Es beinhaltet Perücken aus verschiedenen Epochen und Ländern sowie interaktive Displays zur Herstellung.",
+    "Wissenschaftler haben eine Unterart von Ameisen entdeckt, die ein bemerkenswertes Talent zum Jonglieren besitzen. Diese Ameisen sind dafür bekannt, winzige Sandkörner oder winzige Nahrungsmittel in der Luft zu jonglieren, um ihre Koordination zu verbessern.",
+    "Eine skurrile Studie ergab, dass Menschen, die regelmäßig Rätsel lösen, dazu neigen, eine höhere Wahrscheinlichkeit zu haben, in ihren Träumen als Comicfiguren aufzutreten. Experten führen dies auf die erhöhte Aktivität des kreativen Denkens zurück."
+];

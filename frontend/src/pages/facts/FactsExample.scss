@@ -1,0 +1,46 @@
+@import "../../jun-styling";
+
+.FactsExample-ServerContent {
+  margin-top: 1em;
+  height: 520px;
+  overflow: hidden;
+}
+
+.FactVisualization {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  gap: 24px;
+}
+
+.Fact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Fact-icon {
+  font-size: 70px;
+  transition: color 0.1s;
+  color: $junLightGray;
+}
+
+.Fact-icon.active {
+  font-size: 70px;
+  animation: flash 0.5s linear;
+}
+
+@keyframes flash {
+  0% {
+    color: $junLightGray;
+  }
+  40% {
+    color: black;
+  }
+  60% {
+    color: black;
+  }
+  100% {
+    color: $junLightGray;
+  }
+}

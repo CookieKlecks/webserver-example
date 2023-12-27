@@ -1,0 +1,20 @@
+@import "jun-styling";
+
+.App {
+  text-align: center;
+
+  grid-template-rows: max-content auto;
+  grid-template-areas:
+          "header"
+          "main";
+}
+
+.Header {
+  grid-area: header;
+  margin-bottom: 24px;
+}
+
+.Main {
+  grid-area: main;
+  margin: 0 24px;
+}

@@ -1,0 +1,11 @@
+#local .env files
+.env*.local
+
+# development
+docker-compose.local.yml
+
+#IDE
+/.idea
+
+# Data
+data

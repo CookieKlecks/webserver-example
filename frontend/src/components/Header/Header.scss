@@ -1,0 +1,46 @@
+@import "../../jun-styling";
+
+.Header {
+  font-size: xx-large;
+  text-align: left;
+  margin: 12px 12px 18px 12px;
+
+  display: grid;
+  grid-template-columns: max-content min-content auto;
+  grid-template-areas: "logo sep navbar";
+  grid-gap: 24px;
+}
+
+.Logo {
+  grid-area: logo;
+  font-weight: bold;
+  color: $junRed;
+  text-decoration: unset;
+}
+
+.Navbar {
+  grid-area: navbar;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.Navbar > * {
+  color: $junUltraLightGray;
+  text-decoration: unset;
+}
+
+.Navbar > .active {
+  color: $black;
+}
+
+.Navbar > *:hover {
+  text-decoration: underline;
+}
+
+
+.vertical-separator {
+  grid-area: sep;
+  height: 100%;
+  border: 1px solid $junSeparatorColor;
+}
