@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # ============================ Server configuration ======================================
+  server:
+    # You have to publish your own built docker image to any docker repository of your choice if you want to use a precompiled image.
+    # image: own/hosted/docker/webserver-example-server
+    # This line overwrite the image property. It specifies that the images is locally built from the source.
+    # Comment this line if you want to use your own precompiled docker image.
+    build: ./server
+    container_name: webserver-example-server
+    # restarts container on failure but not after manually stopping it
+    restart: unless-stopped
+    ports:
+      - "10000:10000"
+    # To connect server and frontend
+    networks:
+      - webserver-example-network
+
+  # ============================ Frontend Configuration ====================================
+  frontend:
+    # You have to publish your own built docker image to any docker repository of your choice if you want to use a precompiled image.
+    # image: own/hosted/docker/webserver-example-server
+    # This line overwrite the image property. It specifies that the images is locally built from the source.
+    # Comment this line if you want to use your own precompiled docker image.
+    build: ./frontend
+    container_name: webserver-example-frontend
+    # restarts container on failure but not after manually stopping it
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    # To connect server and frontend
+    networks:
+      - webserver-example-network
+
+networks:
+  webserver-example-network:
